@@ -1,0 +1,1 @@
+X:\progs\todoapp-Angular\obj\Debug\todoapp-Angular.esproj.CoreCompileInputs.cache
