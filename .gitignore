@@ -40,3 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+/.vs/todoapp-Angular/FileContentIndex/98264107-f668-4cea-881a-5f5662ae55c0.vsidx
+/.vs/todoapp-Angular/FileContentIndex/38d23393-863a-4f2f-b141-cb184fc74955.vsidx
