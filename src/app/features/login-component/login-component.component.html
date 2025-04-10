@@ -1,0 +1,43 @@
+<div class="loginBackground">
+  <div class="loginCard">
+    <div class="loginHeader">
+      <div style="font-size:25px;color:white">
+        {{ isLogin ? "Login" : "Register" }}
+      </div>
+    </div>
+
+    <div class="loginBody">
+      <div class="formField">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput type="text"  [(ngModel)]="this.loginDto.username" name="username" required />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [(ngModel)]="this.loginDto.password" name="password" required />
+        </mat-form-field>
+
+        <mat-form-field *ngIf="!isLogin">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password"  name="confirmPassword" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="loginFooter">
+      <button mat-flat-button
+              style="width: 100%; border: 1px solid; background-color: #446C0C"
+              (click)="handleLogin()"
+              [disabled]="isLoading$ | async">
+        {{ isLogin ? "Login" : "Sign up" }}
+      </button>
+
+      <div class="loginChange"
+           style="cursor:pointer; color:gray;"
+           (click)="handleFormChange()">
+        {{ !isLogin ? "Already have an account? Log in instead" : "Don't have an account yet? Sign up" }}
+      </div>
+    </div>
+  </div>
+</div>
