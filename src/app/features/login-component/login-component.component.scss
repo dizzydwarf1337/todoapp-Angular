@@ -1,0 +1,55 @@
+
+@use "../../core/styling/core_theme-colors.scss" as theme;
+
+@use 'sass:map';
+
+
+.loginBackground {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, map.get(theme.$secondary-color, 20) 25%, map.get(theme.$primary-palette,30) 65%, map.get(theme.$primary-palette, 50) 100%);
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width:400px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(map.get(theme.$primary-palette, 0), 0.7),
+      0 5px 10px rgba(map.get(theme.$primary-palette, 10), 0.15);
+}
+
+.loginHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loginFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  gap:20px;
+}

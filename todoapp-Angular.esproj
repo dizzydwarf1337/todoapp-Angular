@@ -7,4 +7,14 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\todoapp-Angular\browser\</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\app\core\Dtos\Categories\" />
+    <Folder Include="src\app\core\Dtos\Statuses\" />
+    <Folder Include="src\app\core\Dtos\Tasks\" />
+    <Folder Include="src\app\core\stores\categoryStore\" />
+    <Folder Include="src\app\core\stores\userStore\" />
+    <Folder Include="src\app\core\stores\taskStore\" />
+    <Folder Include="src\app\core\stores\statusStore\" />
+    <Folder Include="src\assets\" />
+  </ItemGroup>
 </Project>

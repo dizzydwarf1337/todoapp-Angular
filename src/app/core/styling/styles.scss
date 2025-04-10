@@ -1,0 +1,20 @@
+
+
+@use '@angular/material' as mat;
+@use  "core_theme-colors.scss" as theme;
+:root {
+  @include mat.toolbar-overrides ((
+      container-background-color: #396D89,
+      standard-height:50px,
+      title-text-size:18px,
+      container-text-color:white,
+      title-text-font:as,
+
+  ));
+
+  @include mat.theme(( color: theme.$primary-palette, typography: as, density: 0 ));
+}
+html, body {
+  color-scheme: light;
+  font-family: as, "Helvetica Neue", sans-serif;
+}
