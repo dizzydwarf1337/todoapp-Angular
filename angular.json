@@ -37,9 +37,9 @@
               }
             ],
             "styles": [
-              "src/app/core/styling/core_theme-colors.scss",
-              "src/styles.css",
-              "src/app/core/styling/styles.scss"
+              "src/app/core/styling/styles.scss",
+              "src/app/core/styling/styling_theme-colors.scss",
+              "src/styles.css"
             ],
             "scripts": []
           },

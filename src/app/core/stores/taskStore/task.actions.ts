@@ -45,5 +45,7 @@ export const TaskActions = createActionGroup({
     'Task EditCategories Failure': props<{error:string}>(),
 
 
+    'Task TaskClear': emptyProps(),
+
   }
 });

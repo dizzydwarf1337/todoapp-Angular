@@ -1,7 +1,7 @@
 
-@use "../../core/styling/core_theme-colors.scss" as theme;
-
 @use 'sass:map';
+@use '@angular/material' as mat;
+@use '../../core/styling/styling_theme-colors.scss' as theme;
 
 
 .loginBackground {
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, map.get(theme.$secondary-color, 20) 25%, map.get(theme.$primary-palette,30) 65%, map.get(theme.$primary-palette, 50) 100%);
+  background: linear-gradient( 45deg, mat.get-theme-color(theme.$light-theme,secondary,20) 0%, mat.get-theme-color(theme.$light-theme,secondary,40) 25%, mat.get-theme-color(theme.$light-theme, primary, 50) 55%, mat.get-theme-color(theme.$light-theme, primary, 20) 100% );
 }
 
 .loginCard {
@@ -52,4 +52,8 @@
   align-items: center;
   flex-direction:column;
   gap:20px;
+}
+
+.button {
+  background-color: map.get(theme.$success-palette, 40) !important;
 }

@@ -11,6 +11,7 @@ import { selectCategories } from '../../core/stores/categoryStore/category.selec
 import { selectStatuses } from '../../core/stores/statusStore/status.selectors';
 import { selectTasks } from '../../core/stores/taskStore/task.selectors';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-component',
@@ -29,7 +30,7 @@ export class LoginComponentComponent implements OnInit {
   ngOnInit(): void {
     this.isLoggedIn.subscribe(isLoggedIn => {
       if (isLoggedIn) {
-        this.router.navigate(['/main']);  
+        this.router.navigate(['/main']);
       }
     });
   }
@@ -38,22 +39,43 @@ export class LoginComponentComponent implements OnInit {
     password: "",
     username:"",
   }
+
   isLogin: boolean = false;
   isLoggedIn: Observable<boolean>;
   isLoading$: Observable<boolean>;
+  passwordConfirm: string = "";
+  error: string = "";
 
   handleFormChange = () => {
     this.isLogin = !this.isLogin;
   }
 
-
-
-  handleLogin() {
+  handleLogin = () => {
     this.isLoggedIn.subscribe(isLoggedIn => {
       if (!isLoggedIn) {
         this.store.dispatch(UserActions.userLogin(this.loginDto));
+        this.loginDto.password = "";
+        this.loginDto.username = "";
       }
     });
+  }
 
+  handleRegister() {
+    if (this.validateForm()) {
+      this.store.dispatch(UserActions.userRegister({ username: this.loginDto.username, password: this.loginDto.password }))
+      this.isLogin = true;
+    }
+    else {
+      this.error = "Passwords dont match";
+    }
+  }
+
+
+  validateForm = () => {
+    if (this.loginDto.username !== "" && this.loginDto.password !== "" && (this.loginDto.password === this.passwordConfirm)) {
+      return true;
+    }
+    else return false;
+  }
 }
-}
+

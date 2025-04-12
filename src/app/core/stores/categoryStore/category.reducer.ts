@@ -28,28 +28,17 @@ export const CategoryReducer = createReducer(
   initialState,
   on(CategoryActions.categoryCategorys, state => state),
 
-  on(CategoryActions.categoryCreateCategory, state => ({
+  on(
+    CategoryActions.categoryCreateCategory,
+    CategoryActions.categoryDeleteCategory,
+    CategoryActions.categoryEditCategory,
+    CategoryActions.categoryGetCategoryById,
+    CategoryActions.categoryGetCategoryesByUserId,
+    state => ({
     ...state,
     isLoading: true,
   })),
-  on(CategoryActions.categoryDeleteCategory, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(CategoryActions.categoryEditCategory, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(CategoryActions.categoryGetCategoryById, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(CategoryActions.categoryGetCategoryesByUserId, state => ({
-    ...state,
-    isLoading: true,
-  })),
-
-
+  
 
 
   on(CategoryActions.categoryCreatecategorySuccess, (state, category) => ({
@@ -88,25 +77,23 @@ export const CategoryReducer = createReducer(
   })),
 
 
-  on(CategoryActions.categoryCreatecategoryFailure, state => ({
+  on(
+    CategoryActions.categoryCreatecategoryFailure,
+    CategoryActions.categoryDeleteCategoryFailure,
+    CategoryActions.categoryEditCategoryFailure,
+    CategoryActions.categoryGetCategoryByIdFailure,
+    CategoryActions.categoryGetCategoryesByUserIdFailure,
+    state => ({
     ...state,
     isLoading: false,
   })),
-  on(CategoryActions.categoryDeleteCategoryFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
-  on(CategoryActions.categoryEditCategoryFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
-  on(CategoryActions.categoryGetCategoryByIdFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
-  on(CategoryActions.categoryGetCategoryesByUserIdFailure, state => ({
-    ...state,
-    isLoading: false,
+  
+
+  on(CategoryActions.categoryCategoryClear, state => ({
+    selectedCategory: null,
+    categories: [],
+    error: null,
+    isLoading:false,
   })),
 
 );

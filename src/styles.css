@@ -1,17 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family:  "Helvetica Neue", sans-serif; }
-
 
 .snackbar-success {
-  --mat-sys-inverse-surface: #197122;
-  --mat-sys-body-medium-font: Verdana;
-  color: white;
+  --mdc-snackbar-container-color: #197122;
+  --mdc-snackbar-supporting-text-color: white;
+  --mdc-snackbar-supporting-text-font: Verdana, sans-serif;
 }
 
 .snackbar-error {
-  --mat-sys-inverse-surface: #ba1a1a;
-  --mat-sys-body-medium-font: Verdana;
-  color: white;
+  --mdc-snackbar-container-color: #ba1a1a;
+   --mdc-snackbar-supporting-text-color: white;
+   --mdc-snackbar-supporting-text-font: Verdana, sans-serif;
 }
