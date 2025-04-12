@@ -22,28 +22,16 @@ export const StatusReducer = createReducer(
   initialState,
   on(StatusActions.statusStatus, state => state),
 
-  on(StatusActions.statusCreateStatus, state => ({
+  on(StatusActions.statusCreateStatus,
+    StatusActions.statusDeleteStatus,
+    StatusActions.statusEditStatus,
+    StatusActions.statusGetStatusById,
+    StatusActions.statusGetStatusesByUserId,
+    state => ({
     ...state,
     isLoading: true,
   })),
-  on(StatusActions.statusDeleteStatus, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(StatusActions.statusEditStatus, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(StatusActions.statusGetStatusById, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(StatusActions.statusGetStatusesByUserId, state => ({
-    ...state,
-    isLoading: true,
-  })),
-
-
+  
   on(StatusActions.statusCreateStatusSuccess, (state, status) => ({
     ...state,
     statuses: [...state.statuses, status],
@@ -79,26 +67,24 @@ export const StatusReducer = createReducer(
     isLoading: false,
   })),
 
-  on(StatusActions.statusCreateStatusFailure, state => ({
+  on(
+    StatusActions.statusCreateStatusFailure,
+    StatusActions.statusDeleteStatusFailure,
+    StatusActions.statusEditStatusFailure,
+    StatusActions.statusGetStatusByIdFailure,
+    StatusActions.statusGetStatusesByUserIdFailure,
+    state => ({
     ...state,
     isLoading: false,
   })),
-  on(StatusActions.statusDeleteStatusFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
-  on(StatusActions.statusEditStatusFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
-  on(StatusActions.statusGetStatusByIdFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
-  on(StatusActions.statusGetStatusesByUserIdFailure, state => ({
-    ...state,
-    isLoading: false,
-  })),
+
+  on(StatusActions.statusStatusClear, state => ({
+    selectedStatus: null,
+    statuses: [],
+    error: null,
+    isLoading:false,
+  }))
+
 );
 
 

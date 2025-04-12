@@ -20,29 +20,43 @@ export const initialState: UserState = {
 
 export const UserReducer = createReducer(
   initialState,
-  on(UserActions.userLogin, (state) => ({
+
+  on(UserActions.userSetUser, (state, user) => ({
+    ...state,
+    user: user,
+  })),
+
+  on(UserActions.userLogin, UserActions.userDelete, UserActions.userRegister, (state) => ({
     ...state,
     isLoading: true,
   })),
+
   on(UserActions.userLoginSuccess, (state, user) => ({
     ...state,
     user,
-    isLoggedIn:true,
+    isLoggedIn: true,
     error: null,
     isLoading: false,
   })),
   on(UserActions.userLoginFailure, (state, { error }) => ({
     ...state,
-    user: null,  
-    error,
+    isLoggedIn: false,
+    user: null,
+    error:error,
+    isLoading: false,
+  })),
+  on(UserActions.userRegisterSuccess, UserActions.userRegisterFailure, UserActions.userDeleteFailure, state => ({
+    ...state,
     isLoading:false,
   })),
 
-  on(UserActions.userSetUser, (state, user) => ({
-    ...state,
-    user:user,
-  })
-  ),
+  on(UserActions.userLogout, state => ({
+    user: null,
+    isLoggedIn: false,
+    error: null,
+    isLoading:false,
+  }))
+
 );
 
 export const userFeature = createFeature({

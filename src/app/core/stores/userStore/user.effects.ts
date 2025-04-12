@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { concatMap, switchMap, map, catchError, tap, mergeMap } from 'rxjs/operators';  // Импортируем необходимые операторы
-import { Observable, EMPTY, of } from 'rxjs';
+import {  switchMap, map, catchError, tap, mergeMap } from 'rxjs/operators';  // Импортируем необходимые операторы
+import { Observable, of } from 'rxjs';
 import { UserActions } from './user.actions';
 import { LoginDto } from '../../Dtos/Auth/loginDto';
 import { ApiService } from '../../services/apiService/api.service';
-import { Store } from '@ngrx/store';
 import { User } from '../../models/user';
 import { ApiResponse } from '../../models/ApiResponse';
 import { RegisterDto } from '../../Dtos/Auth/registerDto';
@@ -23,7 +22,6 @@ export class UserEffects {
     private apiService: ApiService,
     private actions$: Actions,
     private snackBar: MatSnackBar,
-    private store: Store
   ) {
 
 
@@ -97,7 +95,7 @@ export class UserEffects {
                 return UserActions.userRegisterSuccess({ message: response.value })
               }
               else {
-                this.snackBar.open(response.error, "", {
+                this.snackBar.open(response.error.toString(), "", {
                   duration: 3000,
                   horizontalPosition: 'right',
                   panelClass: ['snackbar-error']
@@ -106,7 +104,7 @@ export class UserEffects {
               }
             }),
             catchError((error) => {
-              this.snackBar.open(error, "", {
+              this.snackBar.open("Username already exists", "", {
                 duration: 3000,
                 horizontalPosition: 'right',
                 panelClass: ['snackbar-error']

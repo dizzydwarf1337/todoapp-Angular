@@ -13,24 +13,24 @@ import { selectUser } from './core/stores/userStore/user.selectors';
 })
 export class AppComponent implements OnInit {
 
+  title = 'todoapp-Angular';
   constructor(private router: Router, private store: Store) { }
 
   ngOnInit(): void {
 
-    const userJson = (localStorage.getItem("todo-user"));
-    if (userJson) {
-      let user = JSON.parse(userJson);
-      this.store.dispatch(UserActions.userSetUser(user));
-      this.store.dispatch(AppActions.appLoadAllData({ userId: user.id }));
-      this.router.navigate(['/main']);
-    }
-    else this.router.navigate(['/login']);
-
+      const userJson = (localStorage.getItem("todo-user"));
+      if (userJson) {
+        let user = JSON.parse(userJson);
+        this.store.dispatch(UserActions.userSetUser(user));
+        this.store.dispatch(AppActions.appLoadAllData({ userId: user.id }));
+        this.router.navigate(['/main']);
+      }
+      else this.router.navigate(['/login']);
+    
 
   }
 
 
-  title = 'todoapp-Angular';
 
 
 

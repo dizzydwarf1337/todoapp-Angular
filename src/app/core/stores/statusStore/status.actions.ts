@@ -33,7 +33,7 @@ export const StatusActions = createActionGroup({
     'Status getStatusesByUserIdFailure': props<{error:string}>(),
 
 
-
+    'Status StatusClear': emptyProps(),
 
   }
 });

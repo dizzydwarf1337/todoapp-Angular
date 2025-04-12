@@ -6,6 +6,7 @@ import { StatusActions } from "../statusStore/status.actions";
 import { TaskActions } from "../taskStore/task.actions";
 import { mergeMap, catchError, of, tap } from "rxjs";
 import { Router } from "@angular/router";
+import { UserActions } from "../userStore/user.actions";
 
 
 
@@ -13,6 +14,7 @@ import { Router } from "@angular/router";
 export class AppEffects {
 
   loadAllData$;
+  clearData$;
 
   constructor(private actions$: Actions, private router:Router) {
     this.loadAllData$ = createEffect(() =>
@@ -38,5 +40,20 @@ export class AppEffects {
         })
       )
     );
+    this.clearData$ = createEffect(() =>
+      this.actions$.pipe(
+        ofType(AppActions.appClearData),
+        mergeMap(() => {
+          return of(
+            UserActions.userLogout({ message: "" }),
+            CategoryActions.categoryCategoryClear(),
+            StatusActions.statusStatusClear(),
+            TaskActions.taskTaskClear(),
+          ).pipe(
+            mergeMap(action => of(action)),
+          );
+        })
+      )
+    )
   }
 }

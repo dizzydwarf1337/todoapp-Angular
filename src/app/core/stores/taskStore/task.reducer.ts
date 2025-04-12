@@ -27,34 +27,19 @@ export const TaskReducer = createReducer(
     ...state,
     isLoading: true,
   })),
-  on(TaskActions.taskEditCategories, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskDeleteTask, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskEditStatus, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskGetTaskById, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskGetTasksByUserId, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskEditTask, state => ({
+  on(
+    TaskActions.taskEditCategories,
+    TaskActions.taskDeleteTask,
+    TaskActions.taskEditStatus,
+    TaskActions.taskGetTaskById,
+    TaskActions.taskGetTasksByUserId,
+    TaskActions.taskEditTask,
+    state => ({
     ...state,
     isLoading: true,
   })),
 
-
-
-  on(TaskActions.taskCreateTaskSuccess, (state, task ) => ({
+  on(TaskActions.taskCreateTaskSuccess, (state, task) => ({
     ...state,
     tasks: [...(state.tasks || []), task],
     isLoading: false,
@@ -70,18 +55,18 @@ export const TaskReducer = createReducer(
     ...state,
     tasks: state.tasks?.map(task =>
       task.taskId === taskId
-        ? { ...task, categoriesId } 
-        : task 
+        ? { ...task, categoriesId }
+        : task
     ) || [],
-    isLoading:false,
+    isLoading: false,
   })),
 
   on(TaskActions.taskEditStatusSuccess, (state, { taskId, statusId }) => ({
     ...state,
     tasks: state.tasks?.map(task =>
       task.taskId === taskId
-        ? { ...task, statusId } 
-        : task 
+        ? { ...task, statusId }
+        : task
     ) || []
   })),
 
@@ -90,49 +75,41 @@ export const TaskReducer = createReducer(
     tasks: state.tasks?.map(task =>
       task.taskId === taskId
         ? { ...task, ...editTaskDto }
-        : task 
+        : task
     ) || [],
-    isLoading:false,
+    isLoading: false,
   })),
-  on(TaskActions.taskGetTaskByIdSuccess, (state, task ) => ({
+  on(TaskActions.taskGetTaskByIdSuccess, (state, task) => ({
     ...state,
     selectedTask: task,
-    isLoading:false,
+    isLoading: false,
   })),
 
   on(TaskActions.taskGetTasksByUserIdSuccess, (state, { tasks }) => ({
     ...state,
     tasks: tasks,
-    isLoading:false,
+    isLoading: false,
   })),
 
-  on(TaskActions.taskCreateTaskFailure, state => ({
+  on(
+    TaskActions.taskCreateTaskFailure,
+    TaskActions.taskEditCategoriesFailure,
+    TaskActions.taskDeleteTaskFailure,
+    TaskActions.taskEditStatusFailure,
+    TaskActions.taskGetTaskByIdFailure,
+    TaskActions.taskGetTasksByUserIdFailure,
+    TaskActions.taskEditTaskFailure,
+    state => ({
     ...state,
     isLoading: true,
   })),
-  on(TaskActions.taskEditCategoriesFailure, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskDeleteTaskFailure, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskEditStatusFailure, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskGetTaskByIdFailure, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskGetTasksByUserIdFailure, state => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(TaskActions.taskEditTaskFailure, state => ({
-    ...state,
-    isLoading: true,
+
+
+  on(TaskActions.taskTaskClear, state => ({
+    selectedTask: null,
+    tasks: null,
+    error: null,
+    isLoading: false,
   })),
 
 

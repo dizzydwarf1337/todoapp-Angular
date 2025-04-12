@@ -1,14 +1,14 @@
 
 
 
-<mat-toolbar style="justify-content:space-between">
+<mat-toolbar style="justify-content:space-between;height:50px">
   <div>
     <span>
       Todo App
     </span>
   </div>
   <div>
-    <button mat-raised-button>
+    <button mat-raised-button (click)="this.handleLogout()">
       <span>Logout</span>
     </button>
   </div>

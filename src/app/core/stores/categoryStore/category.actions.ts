@@ -31,5 +31,8 @@ export const CategoryActions = createActionGroup({
     'category getCategoryesByUserId': props<{ userId: string }>(),
     'category getCategoryesByUserIdSuccess': props<{ categories: Category[] }>(),
     'category getCategoryesByUserIdFailure': props<{ error: string }>(),
+
+
+    'Category CategoryClear': emptyProps(),
   }
 });
