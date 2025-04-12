@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, computed, OnInit } from '@angular/core';
 import { ApiService } from '../../core/services/apiService/api.service';
 import { Category } from '../../core/models/category';
-import { firstValueFrom, Observable } from 'rxjs';
+import { combineLatest, filter, firstValueFrom, map, Observable, take } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { State } from '../../core/stores/userStore/user.reducer';
 import { UserActions } from '../../core/stores/userStore/user.actions';
 import { LoginDto } from '../../core/Dtos/Auth/loginDto';
+import { UserState } from '../../core/stores/userStore/user.reducer';
+import { selectIsLoggedIn } from '../../core/stores/userStore/user.selectors';
+import { selectCategories } from '../../core/stores/categoryStore/category.selectors';
+import { selectStatuses } from '../../core/stores/statusStore/status.selectors';
+import { selectTasks } from '../../core/stores/taskStore/task.selectors';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-component',
@@ -13,28 +18,42 @@ import { LoginDto } from '../../core/Dtos/Auth/loginDto';
   templateUrl: './login-component.component.html',
   styleUrl: './login-component.component.scss'
 })
-export class LoginComponentComponent {
+export class LoginComponentComponent implements OnInit {
 
 
-  constructor(private store: Store<State>) {
+  constructor(private store: Store<UserState>, private router:Router) {
     this.isLoading$ = store.select(state => state.isLoading);
+    this.isLoggedIn = store.select(selectIsLoggedIn);
+  }
+
+  ngOnInit(): void {
+    this.isLoggedIn.subscribe(isLoggedIn => {
+      if (isLoggedIn) {
+        this.router.navigate(['/main']);  
+      }
+    });
   }
 
   loginDto: LoginDto = {
     password: "",
     username:"",
   }
-
   isLogin: boolean = false;
+  isLoggedIn: Observable<boolean>;
   isLoading$: Observable<boolean>;
 
   handleFormChange = () => {
     this.isLogin = !this.isLogin;
   }
 
+
+
   handleLogin() {
-    if (this.isLogin) {
-      this.store.dispatch(UserActions['userLogin'](this.loginDto));
-    }
-  }
+    this.isLoggedIn.subscribe(isLoggedIn => {
+      if (!isLoggedIn) {
+        this.store.dispatch(UserActions.userLogin(this.loginDto));
+      }
+    });
+
+}
 }
