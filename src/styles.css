@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:  "Helvetica Neue", sans-serif; }
+
+
+.snackbar-success {
+  --mat-sys-inverse-surface: #197122;
+  --mat-sys-body-medium-font: Verdana;
+  color: white;
+}
+
+.snackbar-error {
+  --mat-sys-inverse-surface: #ba1a1a;
+  --mat-sys-body-medium-font: Verdana;
+  color: white;
+}

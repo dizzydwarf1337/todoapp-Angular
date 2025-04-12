@@ -64,21 +64,21 @@ export class ApiService {
   Categories = {
     GetCategoryById: (categoryId: string, noAuth = false) => this.requests.get<ApiResponse<Category>>(`categories/${categoryId}`, noAuth),
     GetUserCategories: (userId: string, noAuth = false) => this.requests.get<ApiResponse<Category[]>>(`categories/user/${userId}`, noAuth),
-    CreateCategory: (createCategoryDto: CreateCategoryDto, noAuth = false) => this.requests.post<ApiResponse<string>>(`categories/create`, createCategoryDto, noAuth),
+    CreateCategory: (createCategoryDto: CreateCategoryDto, noAuth = false) => this.requests.post<ApiResponse<Category>>(`categories/create`, createCategoryDto, noAuth),
     DeleteCategory: (categoryId: string, noAuth = false) => this.requests.delete<ApiResponse<string>>(`categories/delete/${categoryId}`, noAuth),
     EditCategory: (editCategoryDto: EditCategoryDto, noAuth = false) => this.requests.put<ApiResponse<string>>("categories/edit", editCategoryDto, noAuth),
   }
   Statuses = {
     GetStatusById: (statusId: string, noAuth = false) => this.requests.get<ApiResponse<Status>>(`statuses/${statusId}`, noAuth),
     GetStatusesByUserId: (userId: string, noAuth = false) => this.requests.get<ApiResponse<Status[]>>(`statuses/user/${userId}`, noAuth),
-    CreateStatus: (createStatusDto: CreateStatusDto, noAuth = false) => this.requests.post<ApiResponse<string>>("statuses/create", createStatusDto, noAuth),
+    CreateStatus: (createStatusDto: CreateStatusDto, noAuth = false) => this.requests.post<ApiResponse<Status>>("statuses/create", createStatusDto, noAuth),
     DeleteStatus: (statusId: string, noAuth = false) => this.requests.delete<ApiResponse<string>>(`statuses/delete/${statusId}`, noAuth),
     EditStatus: (editStatusDto: EditStatusDto, noAuth = false) => this.requests.put<ApiResponse<string>>("statuses/edit", editStatusDto, noAuth),
   }
   Tasks = {
     GetTaskById: (taskId: string, noAuth = false) => this.requests.get<ApiResponse<Task>>(`tasks/${taskId}`, noAuth),
     GetTasksByUserId: (userId: string, noAuth = false) => this.requests.get<ApiResponse<Task[]>>(`tasks/user/${userId}`, noAuth),
-    CreateTask: (createTaskDto: CreateTaskDto, noAuth = false) => this.requests.post<ApiResponse<string>>("tasks/create", createTaskDto, noAuth),
+    CreateTask: (createTaskDto: CreateTaskDto, noAuth = false) => this.requests.post<ApiResponse<Task>>("tasks/create", createTaskDto, noAuth),
     DeleteTask: (taskId: string, noAuth = false) => this.requests.delete<ApiResponse<string>>(`tasks/delete/${taskId}`, noAuth),
     EditTask: (editTaskDto: EditTaskDto, noAuth = false) => this.requests.put<ApiResponse<string>>("tasks/edit", editTaskDto, noAuth),
     EditStatus: (editTaskStatusDto: EditTaskStatusDto, noAuth = false) => this.requests.patch<ApiResponse<string>>("tasks/updateStatus", editTaskStatusDto, noAuth),

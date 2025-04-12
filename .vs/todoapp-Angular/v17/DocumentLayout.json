@@ -3,12 +3,96 @@
   "WorkspaceRootPath": "X:\\progs\\todoapp-Angular\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\features\\login-component\\login-component.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\features\\login-component\\login-component.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\userstore\\user.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\userstore\\user.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\userstore\\user.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\userstore\\user.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\userstore\\user.actions.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\userstore\\user.actions.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\userstore\\user.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\userstore\\user.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\appstore\\app.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\appstore\\app.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\appstore\\app.actions.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\appstore\\app.actions.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\statusstore\\status.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\statusstore\\status.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\appstore\\app.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\appstore\\app.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\categorystore\\category.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\categorystore\\category.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\categorystore\\category.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\categorystore\\category.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\categorystore\\category.actions.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\categorystore\\category.actions.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\taskstore\\task.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\taskstore\\task.effects.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\statusstore\\status.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\statusstore\\status.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\taskstore\\task.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\taskstore\\task.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\services\\apiservice\\api.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\services\\apiservice\\api.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\taskstore\\task.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\taskstore\\task.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\statusstore\\status.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\statusstore\\status.reducer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\stores\\categorystore\\category.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\stores\\categorystore\\category.selectors.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|x:\\progs\\todoapp-angular\\src\\app\\core\\reducers\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{4E16196A-0B9B-4DB6-AA3D-0315387052D2}|todoapp-Angular.esproj|solutionrelative:src\\app\\core\\reducers\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,33 +101,299 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 11,
+          "DockedWidth": 14,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "app.module.ts",
-              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\app.module.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
-              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\app.module.ts",
-              "RelativeToolTip": "src\\app\\app.module.ts",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwDcAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-10T21:13:47.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "app.component.ts",
               "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\app.component.ts",
               "RelativeDocumentMoniker": "src\\app\\app.component.ts",
               "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\app.component.ts",
               "RelativeToolTip": "src\\app\\app.component.ts",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-12T08:48:18.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "app.effects.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\appStore\\app.effects.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\appStore\\app.effects.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\appStore\\app.effects.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\appStore\\app.effects.ts",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwB4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-12T05:32:46.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "login-component.component.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\features\\login-component\\login-component.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\features\\login-component\\login-component.component.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\features\\login-component\\login-component.component.ts",
+              "RelativeToolTip": "src\\app\\features\\login-component\\login-component.component.ts",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwB8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T18:57:36.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "user.selectors.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.selectors.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\userStore\\user.selectors.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.selectors.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\userStore\\user.selectors.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:19:02.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "user.effects.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.effects.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\userStore\\user.effects.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.effects.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\userStore\\user.effects.ts",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAwwCwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:20:52.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "user.reducer.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.reducer.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\userStore\\user.reducer.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.reducer.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\userStore\\user.reducer.ts",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:18:46.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "user.actions.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.actions.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\userStore\\user.actions.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\userStore\\user.actions.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\userStore\\user.actions.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:20:51.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\app.module.ts",
+              "RelativeToolTip": "src\\app\\app.module.ts",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwC0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:28:51.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "app.actions.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\appStore\\app.actions.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\appStore\\app.actions.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\appStore\\app.actions.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\appStore\\app.actions.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-12T05:32:01.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "app.component.spec.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\app.component.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.component.spec.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\app.component.spec.ts",
+              "RelativeToolTip": "src\\app\\app.component.spec.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-10T21:13:46.764Z"
+              "WhenOpened": "2025-04-12T07:50:45.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.reducer.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\appStore\\app.reducer.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\appStore\\app.reducer.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\appStore\\app.reducer.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\appStore\\app.reducer.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:20:18.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "category.effects.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.effects.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\categoryStore\\category.effects.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.effects.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\categoryStore\\category.effects.ts",
+              "ViewState": "AgIAACAAAAAAAAAAAAAjwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T15:35:28.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "category.reducer.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.reducer.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\categoryStore\\category.reducer.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.reducer.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\categoryStore\\category.reducer.ts",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAcwHMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:06:38.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "category.actions.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.actions.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\categoryStore\\category.actions.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.actions.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\categoryStore\\category.actions.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T15:32:02.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "status.effects.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\statusStore\\status.effects.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\statusStore\\status.effects.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\statusStore\\status.effects.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\statusStore\\status.effects.ts",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwEEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T15:35:16.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "task.effects.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\taskStore\\task.effects.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\taskStore\\task.effects.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\taskStore\\task.effects.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\taskStore\\task.effects.ts",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwEwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-12T05:49:09.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "task.selectors.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\taskStore\\task.selectors.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\taskStore\\task.selectors.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\taskStore\\task.selectors.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\taskStore\\task.selectors.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:18:08.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "api.service.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\services\\apiService\\api.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\services\\apiService\\api.service.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\services\\apiService\\api.service.ts",
+              "RelativeToolTip": "src\\app\\core\\services\\apiService\\api.service.ts",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:21:59.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "status.reducer.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\statusStore\\status.reducer.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\statusStore\\status.reducer.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\statusStore\\status.reducer.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\statusStore\\status.reducer.ts",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwGoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:07:13.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "status.selectors.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\statusStore\\status.selectors.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\statusStore\\status.selectors.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\statusStore\\status.selectors.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\statusStore\\status.selectors.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:17:17.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "task.reducer.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\taskStore\\task.reducer.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\taskStore\\task.reducer.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\taskStore\\task.reducer.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\taskStore\\task.reducer.ts",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAcwI8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:18:10.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "category.selectors.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.selectors.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\stores\\categoryStore\\category.selectors.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\stores\\categoryStore\\category.selectors.ts",
+              "RelativeToolTip": "src\\app\\core\\stores\\categoryStore\\category.selectors.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:06:38.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "index.ts",
+              "DocumentMoniker": "X:\\progs\\todoapp-Angular\\src\\app\\core\\reducers\\index.ts",
+              "RelativeDocumentMoniker": "src\\app\\core\\reducers\\index.ts",
+              "ToolTip": "X:\\progs\\todoapp-Angular\\src\\app\\core\\reducers\\index.ts",
+              "RelativeToolTip": "src\\app\\core\\reducers\\index.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-11T19:00:10.987Z"
             }
           ]
         },

@@ -23,6 +23,8 @@ import { UserEffects } from './core/stores/userStore/user.effects';
 import * as fromCategory from './core/stores/categoryStore/category.reducer';
 import { ApiService } from './core/services/apiService/api.service';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AppEffects } from './core/stores/appStore/app.effects';
 
 @NgModule({
   declarations: [
@@ -39,21 +41,16 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSnackBarModule,
     StoreModule.forRoot(reducers, {
       metaReducers
     }),
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([AppEffects, CategoryEffects, StatusEffects, TaskEffects, UserEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    StoreModule.forFeature(fromCategory.categoryFeatureKey, fromCategory.reducer),
-    EffectsModule.forFeature([CategoryEffects, StatusEffects, TaskEffects, UserEffects, UserEffects, CategoryEffects, StatusEffects, TaskEffects]),
-    StoreModule.forFeature(fromStatus.statusFeatureKey, fromStatus.reducer),
-    StoreModule.forFeature(fromTask.taskFeatureKey, fromTask.reducer),
-    StoreModule.forFeature(fromUser.userFeatureKey, fromUser.reducer),
-    StoreModule.forFeature(fromUser.userFeatureKey, fromUser.reducer),
-    StoreModule.forFeature(fromCategory.categoryFeatureKey, fromCategory.reducer),
-    StoreModule.forFeature(fromStatus.statusFeatureKey, fromStatus.reducer),
-    StoreModule.forFeature(fromTask.taskFeatureKey, fromTask.reducer),
+    StoreModule.forFeature(fromCategory.categoryFeatureKey, fromCategory.CategoryReducer),
+    StoreModule.forFeature(fromStatus.statusFeatureKey, fromStatus.StatusReducer),
+    StoreModule.forFeature(fromTask.taskFeatureKey, fromTask.TaskReducer),
+    StoreModule.forFeature(fromUser.userFeatureKey, fromUser.UserReducer),
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
