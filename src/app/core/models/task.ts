@@ -2,8 +2,8 @@
 
 export interface Task {
   taskId: string,
-  title: string,
-  description: string,
+  taskName: string,
+  taskDescription: string,
   categoriesId: string[],
   statusId:string
 }

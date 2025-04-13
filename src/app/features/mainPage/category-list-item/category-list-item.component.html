@@ -1,0 +1,6 @@
+<div style="display:flex; flex-direction:row; justify-content:center; gap:40px">
+
+  <input [(ngModel)]="this.title$!" style="border:none; width:40%; font-size:20px;" (blur)="handleEdit()" />
+
+  <button mat-raised-button [ngClass]="{deleteButton: true}" (click)="handleDelete()">×</button>
+</div>

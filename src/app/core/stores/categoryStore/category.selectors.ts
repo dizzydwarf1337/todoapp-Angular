@@ -26,3 +26,9 @@ export const selectError = createSelector(
   selectCategoryState,
   (state: fromCategory.CategoryState) => state.error
 );
+
+export const selectCategoriesById = (categoryIds: string[]) => createSelector(
+  selectCategoryState,
+  (state: fromCategory.CategoryState) =>
+    state.categories.filter(category => categoryIds.includes(category.id))
+);

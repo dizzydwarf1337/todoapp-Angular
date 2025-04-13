@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{ data.type === 'category' ? 'Add Category' : 'Add Status' }}</h2>
+
+<mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>{{ data.type === 'category' ? 'Category Name' : 'Status Name' }}</mat-label>
+    <input matInput [(ngModel)]="this.name" required/>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+  <button
+          mat-button
+          [ngClass]="{addButton:true}"
+          [mat-dialog-close]="name"
+          cdkFocusInitial
+          (click)="handleCreate()">Create</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>

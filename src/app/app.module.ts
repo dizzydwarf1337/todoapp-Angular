@@ -25,17 +25,49 @@ import { ApiService } from './core/services/apiService/api.service';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppEffects } from './core/stores/appStore/app.effects';
+import { StatusDashboardComponent } from './features/mainPage/status-dashboard/status-dashboard.component';
+import { StatusListComponent } from './features/mainPage/status-list/status-list.component';
+import { StatusListItemComponent } from './features/mainPage/status-list-item/status-list-item.component';
+import { TaskListComponent } from './features/mainPage/task-list/task-list.component';
+import { TaskListItemComponent } from './features/mainPage/task-list-item/task-list-item.component';
+import { UserProfileComponent } from './features/mainPage/user-profile/user-profile.component';
+import { CommonModule } from '@angular/common';
+import { CategoryStatusModalComponent } from './features/mainPage/category-status-modal/category-status-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TaskModalComponent } from './features/mainPage/task-modal/task-modal.component';
+import { CategoryDashboardComponent } from './features/mainPage/category-dashboard/category-dashboard.component';
+import { CategoryListItemComponent } from './features/mainPage/category-list-item/category-list-item.component';
+import { CategoryListComponent } from './features/mainPage/category-list/category-list.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     LoginComponentComponent,
+    StatusDashboardComponent,
+    StatusListComponent,
+    StatusListItemComponent,
+    TaskListComponent,
+    TaskListItemComponent,
+    UserProfileComponent,
+    CategoryStatusModalComponent,
+    TaskModalComponent,
+    CategoryDashboardComponent,
+    CategoryListItemComponent,
+    CategoryListComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
+    MatSelectModule,
+    DragDropModule,
+    MatIconModule,
     HttpClientModule,
+    MatDialogModule,
     MatToolbarModule,
     FormsModule,
     MatButtonModule,

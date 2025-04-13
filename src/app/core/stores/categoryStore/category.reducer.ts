@@ -53,11 +53,11 @@ export const CategoryReducer = createReducer(
     isLoading: false,
   })),
 
-  on(CategoryActions.categoryEditCategorySuccess, (state, categoryEditDto) => ({
+  on(CategoryActions.categoryEditCategorySuccess, (state, { categoryId, categoryName }) => ({
     ...state,
     categories: state.categories.map(category =>
-      category.id === categoryEditDto.categoryId
-        ? { ...category, ...categoryEditDto }
+      category.id === categoryId
+        ? { ...category, name: categoryName } 
         : category
     ),
     isLoading: false,

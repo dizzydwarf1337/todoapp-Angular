@@ -13,6 +13,7 @@ import { Status } from '../../models/status';
 import { StatusActions } from '../statusStore/status.actions';
 import { CreateCategoryDto } from '../../Dtos/Categories/CreateCategoryDto';
 import { EditCategoryDto } from '../../Dtos/Categories/EditCategoryDto';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class CategoryEffects {
@@ -24,7 +25,7 @@ export class CategoryEffects {
   editCategory$;
 
 
-  constructor(private actions$: Actions, private apiService: ApiService)
+  constructor(private actions$: Actions, private apiService: ApiService, private snackBar: MatSnackBar,)
   {
 
     this.getCategoryById$ = createEffect(() =>
@@ -34,6 +35,7 @@ export class CategoryEffects {
           this.apiService.Categories.GetCategoryById(categoryId).pipe(
             map((response: ApiResponse<Category>) => {
               if (response.isSuccess) {
+
                 return CategoryActions.categoryGetCategoryByIdSuccess(response.value);
               } else {
                 return CategoryActions.categoryGetCategoryByIdFailure({ error: response.error });
@@ -73,8 +75,18 @@ export class CategoryEffects {
           this.apiService.Categories.CreateCategory(createCategoryDto).pipe(
             map((response: ApiResponse<Category>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Category created","", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return CategoryActions.categoryCreatecategorySuccess(response.value);
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return CategoryActions.categoryCreatecategoryFailure({ error: response.error });
               }
             }),
@@ -93,8 +105,18 @@ export class CategoryEffects {
           this.apiService.Categories.DeleteCategory(categoryId).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Category deleted", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return CategoryActions.categoryDeleteCategorySuccess({ categoryId: categoryId });
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return CategoryActions.categoryDeleteCategoryFailure({ error: response.error });
               }
             }),
@@ -113,8 +135,18 @@ export class CategoryEffects {
           this.apiService.Categories.EditCategory(editCategoryDto).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Category edited", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return CategoryActions.categoryEditCategorySuccess(editCategoryDto);
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return CategoryActions.categoryEditCategoryFailure({ error: response.error });
               }
             }),

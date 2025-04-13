@@ -9,6 +9,7 @@ import { ApiResponse } from '../../models/ApiResponse';
 import { Status } from '../../models/status';
 import { CreateStatusDto } from '../../Dtos/Statuses/createStatusDto';
 import { EditStatusDto } from '../../Dtos/Statuses/editStatusDto';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class StatusEffects {
@@ -19,7 +20,7 @@ export class StatusEffects {
   deleteStatus$;
   editStatus$;
 
-  constructor(private actions$: Actions, private apiService: ApiService) {
+  constructor(private actions$: Actions, private apiService: ApiService, private snackBar: MatSnackBar) {
 
     this.getStatusById$ = createEffect(() =>
       this.actions$.pipe(
@@ -44,20 +45,16 @@ export class StatusEffects {
       this.actions$.pipe(
         ofType(StatusActions.statusGetStatusesByUserId),
         switchMap(({ userId }) => {
-          console.log("Calling API for userId", userId);  // Логируем запрос
+          console.log("Calling API for userId", userId);  
           return this.apiService.Statuses.GetStatusesByUserId(userId).pipe(
             map((response: ApiResponse<Status[]>) => {
-              console.log('API response:', response); // Логируем ответ API
               if (response.isSuccess) {
-                console.log('Loading statuses for user', response.value);
                 return StatusActions.statusGetStatusesByUserIdSuccess({ statuses: response.value });
               } else {
-                console.log('Error from API:', response.error); // Логируем ошибку от API
                 return StatusActions.statusGetStatusesByUserIdFailure({ error: response.error });
               }
             }),
             catchError((error) => {
-              console.log('Error while loading statuses:', error); // Логируем ошибку в catchError
               return of(StatusActions.statusGetStatusesByUserIdFailure({ error: error.message }));
             })
           );
@@ -71,8 +68,18 @@ export class StatusEffects {
           this.apiService.Statuses.CreateStatus(createStatusDto).pipe(
             map((response: ApiResponse<Status>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Status created", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return StatusActions.statusCreateStatusSuccess(response.value);
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return StatusActions.statusCreateStatusFailure({ error: response.error });
               }
             }),
@@ -91,13 +98,29 @@ export class StatusEffects {
           this.apiService.Statuses.DeleteStatus(statusId).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Status deleted", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return StatusActions.statusDeleteStatusSuccess({ statusId: statusId });
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return StatusActions.statusDeleteStatusFailure({ error: response.error });
               }
             }),
-            catchError((error) =>
-              of(StatusActions.statusDeleteStatusFailure({ error: error.message }))
+            catchError((error) => {
+              this.snackBar.open("Seems like you have tasks with this status, delete them first, or change their status", "", {
+                duration: 3000,
+                horizontalPosition: 'right',
+                panelClass: ['snackbar-error']
+              });
+             return  of(StatusActions.statusDeleteStatusFailure({ error: error.message }))
+            }
             )
           )
         )
@@ -111,8 +134,18 @@ export class StatusEffects {
           this.apiService.Statuses.EditStatus(editStatusDto).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Status edited", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return StatusActions.statusEditStatusSuccess(editStatusDto);
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return StatusActions.statusEditStatusFailure({ error: response.error });
               }
             }),

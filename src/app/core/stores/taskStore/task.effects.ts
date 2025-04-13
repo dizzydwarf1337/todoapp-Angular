@@ -11,6 +11,7 @@ import { EditTaskDto } from '../../Dtos/Tasks/editTaskDto';
 import { EditTaskStatusDto } from '../../Dtos/Tasks/editTaskStatusDto';
 import { EditTaskCategoriesDto } from '../../Dtos/Tasks/editTaskCategoriesDto';
 import { CreateTaskDto } from '../../Dtos/Tasks/createTaskDto';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class TaskEffects {
@@ -23,7 +24,7 @@ export class TaskEffects {
   editTaskCategories$;
   createTask$;
 
-  constructor(private actions$: Actions, private apiService: ApiService) {
+  constructor(private actions$: Actions, private apiService: ApiService, private snackBar: MatSnackBar) {
 
 
     this.createTask$ = createEffect(() =>
@@ -33,13 +34,25 @@ export class TaskEffects {
           this.apiService.Tasks.CreateTask(createTaskDto).pipe(
             map((response: ApiResponse<Task>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Task created", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return TaskActions.taskCreateTaskSuccess( response.value );
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return TaskActions.taskCreateTaskFailure({ error: response.error });
               }
             }),
-            catchError((error) =>
-              of(TaskActions.taskCreateTaskFailure({ error: error }))
+            catchError((error) => {
+              console.log(error);
+              return of(TaskActions.taskCreateTaskFailure({ error: error }))
+            }
             )
           )
         )
@@ -74,7 +87,6 @@ export class TaskEffects {
           this.apiService.Tasks.GetTasksByUserId(userId).pipe(
             map((response: ApiResponse<Task[]>) => {
               if (response.isSuccess) {
-                console.log('Loading tasks for user' + response.value);
                 return TaskActions.taskGetTasksByUserIdSuccess({ tasks: response.value });
               }
               else {
@@ -95,9 +107,19 @@ export class TaskEffects {
           this.apiService.Tasks.DeleteTask(taskId).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Task deleted", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return TaskActions.taskDeleteTaskSuccess({ taskId: taskId})
               }
               else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return TaskActions.taskDeleteTaskFailure({ error: response.error });
               }
             }),
@@ -116,8 +138,18 @@ export class TaskEffects {
           this.apiService.Tasks.EditTask(editTaskDto).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Task edited", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return TaskActions.taskEditTaskSuccess(editTaskDto);
               } else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return TaskActions.taskEditTaskFailure({ error: response.error });
               }
             }),
@@ -136,9 +168,19 @@ export class TaskEffects {
           this.apiService.Tasks.EditStatus(editTaskStatusDto).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Task status edited", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return TaskActions.taskEditStatusSuccess(editTaskStatusDto);
               }
               else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return TaskActions.taskEditStatusFailure({ error: response.error });
               }
             }),
@@ -157,9 +199,19 @@ export class TaskEffects {
           this.apiService.Tasks.EditCategories(editTaskCategoriesDto).pipe(
             map((response: ApiResponse<string>) => {
               if (response.isSuccess) {
+                this.snackBar.open("Task categories edited", "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-success']
+                });
                 return TaskActions.taskEditCategoriesSuccess(editTaskCategoriesDto);
               }
               else {
+                this.snackBar.open(response.error.toString(), "", {
+                  duration: 3000,
+                  horizontalPosition: 'right',
+                  panelClass: ['snackbar-error']
+                });
                 return TaskActions.taskEditCategoriesFailure({ error: response.error });
               }
 

@@ -69,12 +69,17 @@ export const TaskReducer = createReducer(
         : task
     ) || []
   })),
-
   on(TaskActions.taskEditTaskSuccess, (state, { taskId, ...editTaskDto }) => ({
     ...state,
     tasks: state.tasks?.map(task =>
       task.taskId === taskId
-        ? { ...task, ...editTaskDto }
+        ? {
+          ...task,
+          taskDescription: editTaskDto.description,
+          taskName: editTaskDto.title,
+          statusId: editTaskDto.statusId,
+          categoriesId: editTaskDto.categoriesId,
+        }
         : task
     ) || [],
     isLoading: false,

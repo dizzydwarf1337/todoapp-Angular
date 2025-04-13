@@ -1,0 +1,11 @@
+
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../../../core/styling/styling_theme-colors.scss' as theme;
+
+
+.deleteButton{
+    background-color:mat.get-theme-color(theme.$light-theme,error,50) !important;
+    color:white !important;
+}
+
