@@ -16,6 +16,7 @@ import { CreateTaskDto } from '../../Dtos/Tasks/createTaskDto';
 import { EditTaskDto } from '../../Dtos/Tasks/editTaskDto';
 import { EditTaskStatusDto } from '../../Dtos/Tasks/editTaskStatusDto';
 import { EditTaskCategoriesDto } from '../../Dtos/Tasks/editTaskCategoriesDto';
+import { Store } from '@ngrx/store';
 
 @Injectable({
   providedIn: 'root'
@@ -23,19 +24,17 @@ import { EditTaskCategoriesDto } from '../../Dtos/Tasks/editTaskCategoriesDto';
 export class ApiService {
   private baseUrl = 'http://localhost:5000/api';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private store: Store) { }
 
   private addAuth(noAuth: boolean): HttpHeaders {
     let headers = new HttpHeaders();
     if (!noAuth) {
-      const tokenJson = localStorage.getItem("todo-app-token");
-      if (tokenJson) {
-        const token = JSON.parse(tokenJson);
-        headers = headers.set('Authorization', token);
+      const user = JSON.parse(localStorage.getItem("todo-user")!);
+      if (user) {
+        headers = headers.set('Authorization', `Bearer ${user.token}`);
       }
-    } else {
-      headers = headers.set('NoAuth', 'true');
     }
+    console.log(headers);
     return headers;
   }
 

@@ -1,0 +1,20 @@
+
+<div *ngIf="user$ | async as user; else loading" style="display:flex;flex-direction:column; padding:20px; border-radius:20px;  box-shadow:0px 2px 2px 2px #c2d0e6">
+  <div style="display:flex; justify-content:center">
+    <p style="font-size:20px">Hello, {{user!.userName }}</p>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center">
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;gap:20px">
+      <button mat-raised-button style="flex: 1" (click)="this.handleLogout()">
+        <span>Logout</span>
+      </button>
+      <button mat-raised-button [ngClass]="{deleteButton: true}" style="flex: 1" (click)="this.handleDelete()">
+        <span>Delete user</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading user...</p>
+</ng-template>

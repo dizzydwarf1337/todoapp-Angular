@@ -1,0 +1,38 @@
+
+
+<div style="display:flex;flex-direction:column;gap:20px; padding:40px">
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div style="display:flex;flex-direction:row; gap:20px">
+      <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput type="text" [(ngModel)]="this.createTaskDto.title" name="Title" required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput type="text" [(ngModel)]="this.createTaskDto.description" name="Description" required />
+      </mat-form-field>
+    </div>
+    <div style="display:flex;flex-direction:row; gap:20px">
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select multiple [(ngModel)]="createTaskDto.categoriesId">
+          <mat-option *ngFor="let category of categories | async" [value]="category.id">
+            {{ category.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="createTaskDto.statusId" required>
+          <mat-option *ngFor="let status of statuses | async" [value]="status.id" >
+            {{ status.title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:row;gap:20px; width:100%; justify-content:flex-end">
+    <button mat-raised-button [ngClass]="{addButton:true}" (click)="handleAddTask()">Add task</button>
+    <button mat-raised-button  (click)="handleCloseModal()">Cancel</button>
+  </div>
+</div>

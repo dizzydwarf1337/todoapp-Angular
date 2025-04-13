@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 @use './styling_theme-colors.scss' as theme;
-
+@use 'sass:map';
 :root {
 
   @include mat.all-component-themes(theme.$light-theme);
@@ -20,3 +20,16 @@ body {
 }
 
 
+.addButton {
+  background-color: map.get(theme.$success-palette, 40) !important;
+  color: white !important;
+}
+.deleteButton {
+  background-color: mat.get-theme-color(theme.$light-theme,error,50) !important;
+  color: white !important;
+  width:40px !important;
+  height:40px !important;
+}
+.inputChange{
+    color: mat.get-theme-color(theme.$light-theme,primary,30) !important;
+}

@@ -7,10 +7,30 @@
       Todo App
     </span>
   </div>
-  <div>
-    <button mat-raised-button (click)="this.handleLogout()">
-      <span>Logout</span>
-    </button>
-  </div>
 </mat-toolbar>
-<router-outlet />
+
+
+<body style="display:flex; flex-direction:row; padding:30px 60px; gap:20px;">
+  <div style="flex:3; padding:20px; display:flex;flex-direction:column; gap:20px">
+    <div style="display:flex; width:100%; justify-content:flex-end; gap:20px">
+
+      <button [ngClass]="{addButton : true}" mat-raised-button (click)="openTaskModal()">
+        <span>Add Task</span>
+      </button>
+        <button [ngClass]="{addButton:true}" mat-raised-button (click)="openModal('category')">
+          <span>Add category</span>
+        </button>
+        <button [ngClass]="{addButton:true}" mat-raised-button (click)="openModal('status')">
+          <span>Add status</span>
+        </button>
+    </div>
+    
+      <div style="width:100%">
+        <app-status-dashboard />
+      </div>
+  </div>
+  <div style="display:flex; flex-direction:column; flex:1; padding:20px;gap:50px">
+    <app-user-profile/>
+    <app-category-dashboard/>
+  </div>
+</body>

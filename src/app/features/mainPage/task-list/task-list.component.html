@@ -1,0 +1,11 @@
+<div
+
+    style="display:flex; flex-direction:column; gap:20px"
+>
+    <app-task-list-item
+        *ngFor="let task of tasks$ | async"
+        [task]="task"
+        [allCategories]="this.allCategories"
+        [allStatuses]="this.allStatuses"
+    />
+</div>

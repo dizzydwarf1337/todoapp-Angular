@@ -25,3 +25,8 @@ export const selectError = createSelector(
   selectTaskState,
   (state: fromTask.TaskState) => state.error
 );
+
+export const selectTasksWithStatus = (statusId: string) => createSelector(
+  selectTaskState,
+  (state: fromTask.TaskState) => state.tasks?.filter(x => x.statusId == statusId),
+);

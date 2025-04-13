@@ -1,0 +1,6 @@
+<div cdkDropListGroup style="display: flex; flex-direction: column; gap: 50px">
+  <div *ngFor="let status of statuses$ | async">
+
+      <app-status-list-item [status]="status" />
+  </div>
+</div>
